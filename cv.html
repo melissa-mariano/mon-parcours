@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Melissa Mariano Albuquerque</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --accent: #2a4a7f;
+    --accent-light: #e8eef7;
+    --muted: #6b7280;
+    --rule: #c8d4e8;
+    --bg: #fafaf8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 14mm 16mm 14mm 16mm;
+    background: white;
+    min-height: 297mm;
+  }
+
+  /* HEADER */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28pt;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .name span {
+    font-weight: 600;
+  }
+
+  .title-tag {
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 4px;
+  }
+
+  .contacts {
+    text-align: right;
+    font-size: 8.5pt;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .contacts a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* PROFIL */
+  .profil-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 9.5pt;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11pt;
+    color: #2c3e60;
+    line-height: 1.5;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 13px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+    margin-bottom: 9px;
+  }
+
+  /* ENTRIES */
+  .entry {
+    margin-bottom: 9px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 12px;
+  }
+
+  .entry-main { grid-column: 1; }
+  .entry-date {
+    grid-column: 2;
+    font-size: 8pt;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .entry-title {
+    font-weight: 500;
+    font-size: 10pt;
+    color: var(--ink);
+  }
+
+  .entry-title .poste {
+    font-weight: 500;
+  }
+
+  .entry-org {
+    font-size: 8.8pt;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 3px;
+  }
+
+  .entry-bullets {
+    padding-left: 12px;
+    margin-top: 3px;
+  }
+
+  .entry-bullets li {
+    font-size: 9pt;
+    color: #374151;
+    margin-bottom: 2px;
+    list-style: none;
+    position: relative;
+    padding-left: 10px;
+  }
+
+  .entry-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 7.5pt;
+    font-weight: 500;
+    padding: 1px 6px;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  /* TWO COLUMNS */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+
+  /* SKILLS */
+  .skill-block {
+    margin-bottom: 7px;
+  }
+
+  .skill-label {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+
+  .skill-value {
+    font-size: 9pt;
+    color: #374151;
+  }
+
+  /* LANGUE */
+  .lang-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .lang-name {
+    font-size: 9pt;
+    font-weight: 500;
+    width: 80px;
+  }
+
+  .lang-level {
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+
+  .lang-dots {
+    display: flex;
+    gap: 3px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--rule);
+  }
+
+  .dot.filled { background: var(--accent); }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; padding: 12mm 15mm; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="name">Melissa <span>MARIANO ALBUQUERQUE</span></div>
+      <div class="title-tag">Étudiante · Science des Données · BUT SD – Université Côte d'Azur</div>
+    </div>
+    <div class="contacts">
+      +33 7 69 14 81 24<br>
+      <a href="mailto:melissa.mariano-albuquerque@etu.univ-cotedazur.fr">melissa.mariano-albuquerque@etu.univ-cotedazur.fr</a><br>
+      Valbonne, 06560 – France<br>
+      <a href="https://linkedin.com/in/mellalbuquerque">linkedin.com/in/mellalbuquerque</a> &nbsp;·&nbsp;
+      <a href="https://github.com/melissa-mariano">github.com/melissa-mariano</a>
+    </div>
+  </div>
+
+  <!-- PROFIL -->
+  <div class="profil-box">
+    Étudiante en Science des Données, classée dans le Top 5 de sa promotion. Forte d'une expertise en marketing analytique, je mobilise mes compétences en modélisation pour décrypter les comportements et éclairer la décision. Profil trilingue avec trois mobilités internationales, alliant rigueur scientifique, adaptabilité et vision stratégique au service de l'innovation technologique.
+  </div>
+
+  <!-- FORMATION -->
+  <div class="section">
+    <div class="section-title">Formation</div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">B.U.T. Science des Données (BUT SD) <span class="badge">Top 5</span></div>
+        <div class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur (UCA), France</div>
+      </div>
+      <div class="entry-date">2025 – en cours</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Spécialisation en Science et Analyse de Données</div>
+        <div class="entry-org">USP – Escola Superior de Agricultura "Luiz de Queiroz" (ESALQ), Brésil</div>
+        <ul class="entry-bullets">
+          <li>Formation certifiante axée sur l'analyse de données et la prise de décision stratégique</li>
+        </ul>
+      </div>
+      <div class="entry-date">2022 – 2024</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Diplôme de Technologie en Marketing (Bac+2)</div>
+        <div class="entry-org">Centro Universitário FMU, Brésil</div>
+      </div>
+      <div class="entry-date">2018 – 2019</div>
+    </div>
+  </div>
+
+  <!-- PROJETS -->
+  <div class="section">
+    <div class="section-title">Projets Réalisés</div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Au-delà des défilés : Analyse prédictive de tendances par IA</div>
+        <div class="entry-org">Mémoire de spécialisation – USP</div>
+        <ul class="entry-bullets">
+          <li>Collecte et analyse des données des fashion weeks de Paris, Milan, New York et Londres par web scraping et traitement automatique du langage (NLP)</li>
+          <li><strong>Technologies :</strong> Python, NLP, collecte de données</li>
+        </ul>
+      </div>
+      <div class="entry-date">2024</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Analyse textuelle RSE : Engagement vs Réalité</div>
+        <div class="entry-org">Projet académique – BUT SD</div>
+        <ul class="entry-bullets">
+          <li>Analyse des rapports RSE de 17 marques (luxe et fast fashion) pour identifier les thématiques environnementales dominantes (climat, traçabilité)</li>
+          <li><strong>Technologies :</strong> Python, NLP</li>
+        </ul>
+      </div>
+      <div class="entry-date">2025 – 2026</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Enquête Mode et Société : Impact des tendances sur la consommation</div>
+        <div class="entry-org">Projet académique – BUT SD</div>
+        <ul class="entry-bullets">
+          <li>Conception et analyse d'une enquête complète sur l'influence de l'industrie de la mode sur les choix de consommation</li>
+          <li><strong>Technologies :</strong> Méthodologie d'enquête, analyse statistique</li>
+        </ul>
+      </div>
+      <div class="entry-date">2025 – 2026</div>
+    </div>
+  </div>
+
+  <!-- EXPÉRIENCE -->
+  <div class="section">
+    <div class="section-title">Expérience Professionnelle</div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Assistant d'accueil <span style="font-weight:300">· Emploi étudiant</span></div>
+        <div class="entry-org">Université Côte d'Azur – Bibliothèque universitaire de Sophia Antipolis, Biot</div>
+        <ul class="entry-bullets">
+          <li>Accueil du public, orientation des usagers et gestion des prêts et retours</li>
+        </ul>
+      </div>
+      <div class="entry-date">01/2026 – en cours</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Stagiaire Data Ops</div>
+        <div class="entry-org">FNEEK, Valbonne</div>
+        <ul class="entry-bullets">
+          <li>Automatisation de la collecte de données par web scraping et application de techniques de NLP pour la structuration de bases de données</li>
+        </ul>
+      </div>
+      <div class="entry-date">12/2025 – 01/2026</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Experte en Marketing Analytics</div>
+        <div class="entry-org">BeFly, São Paulo – Brésil</div>
+        <ul class="entry-bullets">
+          <li>Analyse de données marketing, élaboration de rapports avec recommandations stratégiques et suivi de KPIs via Google Analytics et Excel</li>
+        </ul>
+      </div>
+      <div class="entry-date">2023 – 2025</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Parcours Marketing et Communication</div>
+        <div class="entry-org">Grupo GSH, Fin4she, Pandhora, Xerpa – Brésil</div>
+        <ul class="entry-bullets">
+          <li>Gestion de campagnes de performance, création de contenu multicanal et analyse d'engagement</li>
+          <li>Pilotage de stratégies de marque et de CRM (LinkedIn, Instagram)</li>
+        </ul>
+      </div>
+      <div class="entry-date">2018 – 2023</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-main">
+        <div class="entry-title">Expériences en service et accueil</div>
+        <div class="entry-org">Firmenich, HB Hotels, Riachuelo, Khelf, Inbrands – Brésil</div>
+        <ul class="entry-bullets">
+          <li>Accueil bilingue, gestion de caisse et relation client</li>
+        </ul>
+      </div>
+      <div class="entry-date">2014 – 2018</div>
+    </div>
+  </div>
+
+  <!-- COMPÉTENCES + LANGUES -->
+  <div class="two-col">
+    <div class="section">
+      <div class="section-title">Compétences</div>
+      <div class="skill-block">
+        <div class="skill-label">Programmation</div>
+        <div class="skill-value">Python, R, SQL, Git</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-label">Analyse & Visualisation</div>
+        <div class="skill-value">Power BI, Excel avancé, Google Analytics</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-label">Méthodes</div>
+        <div class="skill-value">NLP, Web Scraping, Analyse statistique, Enquête</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-label">Soft Skills</div>
+        <div class="skill-value">Rigueur scientifique, gestion de projet, adaptabilité</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Langues</div>
+
+      <div class="lang-row">
+        <div class="lang-name">Portugais</div>
+        <div class="lang-dots">
+          <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+        </div>
+        <div class="lang-level">Langue maternelle</div>
+      </div>
+
+      <div class="lang-row">
+        <div class="lang-name">Français</div>
+        <div class="lang-dots">
+          <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+        </div>
+        <div class="lang-level">C1 – Avancé</div>
+      </div>
+
+      <div class="lang-row">
+        <div class="lang-name">Anglais</div>
+        <div class="lang-dots">
+          <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+        </div>
+        <div class="lang-level">C1 – Avancé</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
