@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Melissa MARIANO ALBUQUERQUE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --accent: #2a4a7f;
+    --accent-light: #e8eef7;
+    --muted: #6b7280;
+    --rule: #c8d4e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: white;
+    color: var(--ink);
+    font-size: 9.2pt;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 15mm 2mm 15mm;
+    background: white;
+    overflow: hidden;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+  }
+
+  /* --- HEADER --- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 10px;
+  }
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25pt;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .name span { font-weight: 600; text-transform: uppercase; }
+  
+  .contacts {
+    text-align: right;
+    font-size: 8pt;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+  .contacts a { color: var(--accent); text-decoration: none; white-space: nowrap; }
+
+  /* --- SECTIONS --- */
+  .section { margin-bottom: 10px; }
+  
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12.5pt;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+
+  /* --- ENTRIES --- */
+  .entry { margin-bottom: 8px; }
+  
+  .entry-header { margin-bottom: 1px; }
+  .entry-title { font-weight: 600; font-size: 9.6pt; color: var(--ink); }
+  .entry-date { font-weight: 600; font-size: 8.5pt; color: var(--accent); }
+  
+  .badge {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 7pt;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 4px;
+    display: inline;
+  }
+
+  .entry-org { font-size: 8.5pt; color: var(--muted); font-style: italic; display: block; margin-top: 1px; }
+  .exp-role { font-size: 8.2pt; font-weight: 600; color: var(--accent); text-transform: uppercase; display: inline; margin-right: 4px;}
+  
+  .desc {
+    font-size: 9.2pt;
+    color: #374151;
+    margin-top: 2px;
+    text-align: justify;
+  }
+
+  p.bullet-point {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    text-indent: -10px;
+    font-size: 9.2pt;
+    color: #374151;
+    text-align: justify;
+  }
+
+  .tech-line { margin-top: 2px; font-size: 8.2pt; color: var(--muted); }
+  .tech-tag {
+    font-size: 6.8pt;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  /* --- COMPÉTENCES & LANGUES --- */
+  .skill-line { margin-bottom: 3px; font-size: 9.2pt; color: #374151; }
+  .skill-line strong {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 7.8pt;
+    text-transform: uppercase;
+  }
+  .lang-dots { color: var(--accent); letter-spacing: 1px; font-size: 8pt; }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="name">Melissa <span>MARIANO ALBUQUERQUE</span></div>
+    <div class="contacts">
+      +33 7 69 14 81 24<br>
+      06560 Valbonne, France<br>
+      <a href="mailto:melissa.mariano-albuquerque@etu.univ-cotedazur.fr">melissa.mariano-albuquerque@etu.univ-cotedazur.fr</a><br>
+      <a href="https://linkedin.com/in/mellalbuquerque">linkedin.com/in/mellalbuquerque</a><br>
+      <a href="https://github.com/melissa-mariano">github.com/melissa-mariano</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Formation</div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">B.U.T. Science des Données</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2025 – en cours</span>
+        <span class="badge">Mention Bien · Rang 4 / 27</span>
+      </div>
+      <p class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur</p>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Certification professionnelle – Science et analyse de données</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2022 – 2024</span>
+      </div>
+      <p class="entry-org">USP – Escola Superior de Agricultura "Luiz de Queiroz" (ESALQ), Brésil</p>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Diplôme de Technologie en Marketing (Bac+2)</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2018 – 2019</span>
+      </div>
+      <p class="entry-org">Centro Universitário FMU, Brésil</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projets</div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Modélisation des déterminants du comportement de consommation</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2026</span>
+      </div>
+      <p class="desc">Analyse quantitative (n=428) visant à modéliser les déterminants des décisions individuelles dans des environnements prescriptifs. Construction de variables comportementales et segmentation par clustering afin d'identifier des profils décisionnels et leurs logiques d'arbitrage.</p>
+      <div class="tech-line">
+        <span class="tech-tag">Python</span> &nbsp;<span class="tech-tag">Clustering (K-means)</span> &nbsp;<span class="tech-tag">Visualisation de flux (Sankey)</span>
+      </div>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Analyse sémantique des engagements RSE : écarts entre discours et pratiques</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2025</span>
+      </div>
+      <p class="desc">Étude NLP de 17 rapports ESG visant à évaluer la cohérence entre les engagements RSE déclarés et les priorités opérationnelles. Identification de patterns sémantiques et de structures lexicales permettant de distinguer communication stratégique et pratiques effectives.</p>
+      <div class="tech-line">
+        <span class="tech-tag">Python</span> &nbsp;<span class="tech-tag">NLP (TF-IDF, tokenisation)</span> &nbsp;<span class="tech-tag">Web Scraping</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Analyse de corpus textuel : détection de tendances par n-grams</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2024</span>
+      </div>
+      <p class="desc">Constitution d'un corpus de textes collectés par web scraping, suivie d'une analyse NLP visant à identifier des régularités lexicales. Analyse par n-grams pour faire émerger des tendances à partir de la frequência e da co-occurrence des termes.</p>
+      <div class="tech-line">
+        <span class="tech-tag">Python</span> &nbsp;<span class="tech-tag">Web Scraping</span> &nbsp;<span class="tech-tag">NLP (n-grams)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Expérience Professionnelle</div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Accueil</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 01/2026 – en cours</span>
+      </div>
+      <p class="entry-org"><span class="exp-role">Emploi étudiant</span> | Learning Centre SophiaTech (Université Côte d'Azur) – Biot, France</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Data Ops</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 12/2025 – 01/2026</span>
+      </div>
+      <p class="entry-org"><span class="exp-role">Stage</span> | FNEEK – Biot, France</p>
+      <p class="desc">Extraction automatisée de texte à partir de fichiers PDF et application de techniques de NLP pour la structuration de bases de données, dans le cadre d'une analyse des rapports RSE des entreprises du CAC 40 sur 5 ans.</p>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Marketing Analytics</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2023 – 2025</span>
+      </div>
+      <p class="entry-org"><span class="exp-role">CDI – Growth Marketing Specialist</span> | BeFly, São Paulo, Brésil<br></p>
+      <p class="bullet-point"><strong style="color: var(--accent);"> –</strong> Pilotage de la performance marketing par l'analyse de données multi-sources (Google, Meta, CRM) sur Looker Studio.<br></p>
+      <p class="bullet-point"><strong style="color: var(--accent);"> –</strong> Développement d'un modelo de clustering para segmenter la base clients e identifier des personas.<br></p>
+      <p class="bullet-point"><strong style="color: var(--accent);"> –</strong> Conception d'un calendrier de communication data-driven basé sur l'analyse fréquentielle des destinations (nettoyage et mapping IATA inclus), distinguant les flux de réservation et de voyage pour optimiser la répartition des efforts de l'équipe.<br></p>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Marketing et Communication</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2018 – 2023</span>
+      </div>
+      <p class="entry-org"><span class="exp-role">CDI · Chargée de Marketing Digital</span> | Grupo GSH, Fin4she, Pandhora, Xerpay – Brésil<br></p>
+      <p class="desc">Pilotage de la stratégie de marque et des campagnes d'acquisition multicanales, criação de conteúdos e analyse de performance pour la génération et le nurturing de leads.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Compétences</div>
+    
+    <div class="skill-line">
+      <strong>Programmation & Requêtage :</strong> Python, R, SQL
+    </div>
+    <div class="skill-line">
+      <strong>Dataviz & Reporting :</strong> Power BI, Excel, Looker Studio
+    </div>
+    <div class="skill-line">
+      <strong>Acquisition & Analyse de Données :</strong> Analyse statistique, Clustering, NLP, Web Scraping
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Langues & Certifications</div>
+
+    <div class="skill-line">
+      <strong>Langues :</strong> 
+      Portugais <span style="color: var(--muted); font-size: 8.5pt;">(Langue maternelle <span class="lang-dots">●●●●●</span>)</span> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      Français <span style="color: var(--muted); font-size: 8.5pt;">(C1 – Avancé <span class="lang-dots">●●●●○</span>)</span> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      Anglais <span style="color: var(--muted); font-size: 8.5pt;">(C1 – Avancé <span class="lang-dots">●●●●○</span>)</span>
+    </div>
+    <div class="skill-line" style="margin-top: 5px;">
+      <strong>DALF (Diplôme Approfondi de Langue Française) :</strong> Résultat : CEFR C1 – Avancé <span style="color: var(--muted); font-size: 8.5pt;">(nov. 2024)</span>
+    </div>
+    <div class="skill-line">
+      <strong>Duolingo English Test :</strong> Résultat : 135 – C1 Advanced <span style="color: var(--muted); font-size: 8.5pt;">(nov. 2024)</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

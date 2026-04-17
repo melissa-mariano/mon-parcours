@@ -17,29 +17,28 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* FORÇANDO UMA ÚNICA PÁGINA A4 NO NAVEGADOR E IMPRESSÃO */
   @page {
     size: A4;
     margin: 0;
   }
 
   body {
-    /* FONTE DO SISTEMA: Elimina 100% o bug do "L" e Hífen no Playwright */
+    /* FONTE DO SISTEMA: Elimina o bug do PDF no Chrome/Playwright */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: white;
     color: var(--ink);
-    font-size: 10pt;
-    line-height: 1.35;
+    font-size: 9.6pt; /* Reduzido levemente para caber tudo */
+    line-height: 1.3; /* Entrelinhas mais compacto */
     -webkit-font-smoothing: antialiased;
   }
 
   .page {
     width: 210mm;
-    height: 297mm; /* Altura exata do A4 */
+    height: 297mm;
     margin: 0 auto;
-    padding: 8mm 14mm;
+    padding: 6mm 14mm; /* Margem vertical reduzida para dar mais respiro ao conteúdo */
     background: white;
-    overflow: hidden; /* Esconde qualquer milímetro que tente vazar para a página 2 */
+    overflow: hidden;
   }
 
   /* --- HEADER --- */
@@ -47,14 +46,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     border-bottom: 2px solid var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28pt;
+    font-size: 26pt;
     font-weight: 300;
     letter-spacing: 0.02em;
     color: var(--ink);
@@ -65,9 +64,9 @@
 
   .contacts {
     text-align: right;
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     color: var(--muted);
-    line-height: 1.5;
+    line-height: 1.4;
     white-space: nowrap;
     min-width: max-content;
     flex-shrink: 0;
@@ -76,22 +75,22 @@
   .contacts a { color: var(--accent); text-decoration: none; }
 
   /* --- SECTIONS --- */
-  .section { margin-bottom: 12px; }
+  .section { margin-bottom: 10px; }
 
   .section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 13pt;
+    font-size: 12.5pt;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
     border-bottom: 1px solid var(--rule);
     padding-bottom: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   /* --- ENTRIES --- */
-  .entry { margin-bottom: 8px; }
+  .entry { margin-bottom: 6px; }
 
   .entry-header {
     display: flex;
@@ -102,12 +101,12 @@
 
   .entry-title { 
     font-weight: 600;
-    font-size: 10pt;
+    font-size: 9.6pt;
     color: var(--ink); 
   }
 
   .entry-date {
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     color: var(--muted);
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -118,7 +117,7 @@
   .entry-meta { margin-bottom: 2px; }
 
   .entry-role, .exp-role {
-    font-size: 8.5pt;
+    font-size: 8.2pt;
     font-weight: 600; 
     color: var(--accent);
     text-transform: uppercase;
@@ -128,16 +127,16 @@
   }
 
   .entry-org, .exp-org {
-    font-size: 8.8pt;
+    font-size: 8.5pt;
     color: var(--muted);
     font-style: italic;
     display: inline-block;
   }
 
   .entry-desc, .exp-desc, .project-desc {
-    font-size: 9.5pt;
+    font-size: 9.2pt;
     color: #374151;
-    line-height: 1.35;
+    line-height: 1.3;
     padding-right: 2%;
   }
 
@@ -150,12 +149,12 @@
   }
 
   .exp-bullets li {
-    font-size: 9.5pt;
+    font-size: 9.2pt;
     color: #374151;
     position: relative;
     padding-left: 14px;
     margin-bottom: 2px;
-    line-height: 1.35;
+    line-height: 1.3;
   }
 
   .exp-bullets li::before {
@@ -171,7 +170,7 @@
     display: inline-block;
     background: var(--accent-light);
     color: var(--accent);
-    font-size: 7.5pt;
+    font-size: 7.2pt;
     font-weight: 600;
     padding: 1px 6px;
     border-radius: 2px;
@@ -185,10 +184,10 @@
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
-    margin-top: 4px;
+    margin-top: 3px;
   }
   .tech-tag {
-    font-size: 7pt;
+    font-size: 6.8pt;
     background: var(--accent-light);
     color: var(--accent);
     padding: 1px 5px;
@@ -204,34 +203,34 @@
     gap: 0 28px;
   }
 
-  .skill-row { margin-bottom: 4px; }
+  .skill-row { margin-bottom: 3px; }
   .skill-row strong {
     font-weight: 600;
     color: var(--ink);
-    font-size: 8pt;
+    font-size: 7.8pt;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     display: block;
     margin-bottom: 1px;
   }
-  .skill-row p { font-size: 9.5pt; color: #374151; }
+  .skill-row p { font-size: 9.2pt; color: #374151; }
 
   .lang-row {
     display: flex;
     align-items: center;
     gap: 7px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .lang-name {
-    font-size: 9.5pt;
+    font-size: 9.2pt;
     font-weight: 600;
     width: 75px;
     color: var(--ink);
   }
   .lang-dots { display: flex; gap: 3px; }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule); }
+  .dot { width: 5.5px; height: 5.5px; border-radius: 50%; background: var(--rule); }
   .dot.filled { background: var(--accent); }
-  .lang-level { font-size: 8pt; color: var(--muted); margin-left: auto; }
+  .lang-level { font-size: 7.8pt; color: var(--muted); margin-left: auto; }
 </style>
 </head>
 <body>

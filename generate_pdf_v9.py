@@ -4,13 +4,13 @@ with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
 
-    page.goto("file:///C:/Users/mel96/Documents/mon parcours/cv_v8.html")
+    page.goto("file:///C:/Users/mel96/Documents/mon parcours/cv_v9.html")
     
     # Aguarda o carregamento completo para evitar fontes quebradas
     page.evaluate("document.fonts.ready")
 
     page.pdf(
-        path="cv_v8.pdf",
+        path="cv_v9.pdf",
         format="A4",
         margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
         print_background=True,
