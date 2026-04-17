@@ -4,10 +4,10 @@ with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
 
-    page.goto("file:///C:/Users/mel96/Documents/mon parcours/cv_modificado.html")
+    page.goto("file:///C:/Users/mel96/Documents/mon parcours/cv_v3.html")
 
     page.pdf(
-        path="cv_modificado.pdf",
+        path="cv_v3.pdf",
         format="A4",
         margin={"top": "0.5cm", "bottom": "0.5cm", "left": "0.5cm", "right": "0.5cm"},
         print_background=True,

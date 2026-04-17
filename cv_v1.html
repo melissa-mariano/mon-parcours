@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV – Melissa Mariano Albuquerque</title>
+<title>CV – Melissa MARIANO ALBUQUERQUE</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -21,14 +21,14 @@
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
     color: var(--ink);
-    font-size: 10.5pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
 
   .page {
     max-width: 210mm;
     margin: 0 auto;
-    padding: 8mm 14mm; /* Margem vertical reduzida para ganhar espaço */
+    padding: 8mm 14mm;
     background: white;
     min-height: 297mm;
   }
@@ -40,34 +40,44 @@
     align-items: flex-end;
     padding-bottom: 6px;
     border-bottom: 2px solid var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28pt;
-    font-weight: 300;
-    letter-spacing: 0.02em;
     color: var(--ink);
-    line-height: 1;
+    line-height: 0.9;
   }
-
-  .name span { font-weight: 600; }
+  .first-name { font-size: 28pt; font-weight: 300; text-transform: uppercase; }
+  .last-name { 
+    font-family: 'DM Sans', sans-serif; 
+    font-size: 12pt; 
+    font-weight: 700; 
+    color: var(--muted); 
+    letter-spacing: 0.15em; 
+    margin-top: 4px; 
+  }
 
   .contacts {
     text-align: right;
     font-size: 8.5pt;
     color: var(--muted);
     line-height: 1.5;
-    white-space: nowrap;
-    min-width: max-content;
-    flex-shrink: 0;
   }
-
   .contacts a { color: var(--accent); text-decoration: none; }
 
+  /* --- PROFILE SUMMARY (ESTRATÉGICO THALES) --- */
+  .profile-summary {
+    background: var(--bg);
+    padding: 8px 12px;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--accent);
+    font-style: italic;
+    font-size: 9.5pt;
+  }
+
   /* --- SECTIONS --- */
-  .section { margin-bottom: 20px; }
+  .section { margin-bottom: 18px; }
 
   .section-title {
     font-family: 'Cormorant Garamond', serif;
@@ -78,169 +88,64 @@
     color: var(--accent);
     border-bottom: 1px solid var(--rule);
     padding-bottom: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   /* --- ENTRIES --- */
-  .entry { margin-bottom: 8px; }
+  .entry { margin-bottom: 12px; }
+  .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+  .entry-title { font-weight: 600; font-size: 10pt; color: var(--ink); }
+  .entry-date { font-size: 8.5pt; color: var(--muted); font-weight: 500; white-space: nowrap; padding-left: 10px; }
+  .entry-meta { margin-bottom: 2px; }
+  .entry-role { font-size: 8.5pt; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; display: inline-block; margin-right: 6px; }
+  .entry-org { font-size: 8.8pt; color: var(--muted); font-style: italic; display: inline-block; }
+  .entry-desc { font-size: 9.5pt; color: #374151; line-height: 1.35; padding-right: 5%; }
 
-  .entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 1px;
-  }
+  /* --- TECH TAGS (DO CV_V1) --- */
+  .tech-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .tech-tag { font-size: 6.5pt; background: var(--accent-light); color: var(--accent); padding: 1px 6px; border-radius: 3px; font-weight: 600; text-transform: uppercase; }
 
-  .entry-title { 
-    font-weight: 500; /* Removido o excesso de negrito */
-    font-size: 10pt;  /* Tamanho reduzido para melhor hierarquia */
-    color: var(--ink); 
-  }
+  .badge { font-size: 7.5pt; background: var(--accent-light); color: var(--accent); font-weight: 600; padding: 1px 6px; border-radius: 2px; margin-left: 6px; }
+  .skills-inline p { font-size: 9.5pt; margin-bottom: 2px; color: #374151; }
+  .skills-inline strong { font-weight: 500; color: var(--ink); text-transform: uppercase; font-size: 8.5pt; letter-spacing: 0.04em; }
 
-  .entry-date {
-    font-size: 8.5pt;
-    color: var(--muted);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-    padding-left: 10px;
-  }
-
-  .entry-meta {
-    margin-bottom: 2px;
-  }
-
-  .entry-role {
-    font-size: 8.5pt;
-    font-weight: 600; /* Peso ajustado de 700 para 600 */
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    display: inline-block;
-    margin-right: 6px;
-  }
-
-  .entry-org {
-    font-size: 8.8pt;
-    color: var(--muted);
-    font-style: italic;
-    display: inline-block;
-  }
-
-  .entry-desc {
-    font-size: 9.5pt;
-    color: #374151;
-    line-height: 1.35; /* Altura da linha levemente comprimida */
-    padding-right: 5%; /* Reduzido de 12% para evitar excesso de quebras de linha */
-  }
-
-  .entry-bullets {
-    margin-top: 2px; 
-    margin-bottom: 0;
-    list-style: none;
-    padding-left: 0;
-    padding-right: 5%;
-  }
-
-  .entry-bullets li {
-    font-size: 9.5pt;
-    color: #374151;
-    position: relative;
-    padding-left: 14px;
-    margin-bottom: 2px;
-    line-height: 1.35;
-  }
-
-  .entry-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-  }
-
-  /* --- EXTRAS --- */
-  .badge {
-    display: inline-block;
-    background: var(--accent-light);
-    color: var(--accent);
-    font-size: 7.5pt;
-    font-weight: 600;
-    padding: 1px 6px;
-    border-radius: 2px;
-    margin-left: 6px;
-    vertical-align: middle;
-    text-transform: none;
-    letter-spacing: normal;
-  }
-
-  .skills-inline p {
-    font-size: 9.5pt;
-    margin-bottom: 2px;
-    color: #374151;
-  }
-
-  .skills-inline strong {
-    font-weight: 500;
-    color: var(--ink);
-    text-transform: uppercase;
-    font-size: 8.5pt;
-    letter-spacing: 0.04em;
-  }
-
-  @media print {
-    body { background: white; }
-    .page { margin: 0; padding: 8mm 14mm; box-shadow: none; }
-  }
+  @media print { body { background: white; } .page { margin: 0; padding: 8mm 14mm; box-shadow: none; } }
 </style>
 </head>
 <body>
 <div class="page">
 
   <div class="header">
-    <div>
-      <div class="name">Melissa <span>MARIANO ALBUQUERQUE</span></div>
+    <div class="name">
+      <div class="first-name">Melissa</div>
+      <div class="last-name">MARIANO ALBUQUERQUE</div>
     </div>
     <div class="contacts">
-      +33 7 69 14 81 24<br>
-      06560 Valbonne, France<br>
+      06560 Valbonne, France &nbsp;·&nbsp; +33 7 69 14 81 24<br>
       <a href="mailto:melissa.mariano-albuquerque@etu.univ-cotedazur.fr">melissa.mariano-albuquerque@etu.univ-cotedazur.fr</a><br>
-      <a href="https://linkedin.com/in/mellalbuquerque">linkedin.com/in/mellalbuquerque</a> &nbsp;·&nbsp;
-      <a href="https://github.com/melissa-mariano">github.com/melissa-mariano</a>
+      <a href="https://linkedin.com/in/mellalbuquerque">linkedin.com/in/mellalbuquerque</a> &nbsp;·&nbsp; <a href="https://github.com/melissa-mariano">github.com/melissa-mariano</a>
     </div>
+  </div>
+
+  <div class="profile-summary">
+    J’explore comment des phénomènes humains complexes peuvent être transformés en variables mesurables, puis en modèles quantitatifs utiles à la décision. Mon approche combine observation terrain, rigueur statistique et outils de data science pour relier comportement, structure et prévision.
   </div>
 
   <div class="section">
     <div class="section-title">Formation</div>
-
     <div class="entry">
       <div class="entry-header">
         <div class="entry-title">B.U.T. Science des Données (BUT SD) <span class="badge">Mention Bien | Rang : 4 / 27</span></div>
-        <div class="entry-date">2025 – en cours</div>
+        <div class="entry-date">2025 – Présent</div>
       </div>
-      <div class="entry-meta">
-        <span class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur</span>
-      </div>
+      <div class="entry-meta"><span class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur</span></div>
     </div>
-
     <div class="entry">
       <div class="entry-header">
         <div class="entry-title">Certification professionnelle – Science et analyse de données</div>
         <div class="entry-date">2022 – 2024</div>
       </div>
-      <div class="entry-meta">
-        <span class="entry-org">USP – Escola Superior de Agricultura "Luiz de Queiroz" (ESALQ)</span>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <div class="entry-title">Diplôme de Technologie en Marketing (Bac+2)</div>
-        <div class="entry-date">2018 – 2019</div>
-      </div>
-      <div class="entry-meta">
-        <span class="entry-org">Centro Universitário FMU</span>
-      </div>
+      <div class="entry-meta"><span class="entry-org">USP – Escola Superior de Agricultura "Luiz de Queiroz" (ESALQ)</span></div>
     </div>
   </div>
 
@@ -249,37 +154,40 @@
 
     <div class="entry">
       <div class="entry-header">
-        <div class="entry-title">Mode et Société : Impact des tendances sur la consommation</div>
+        <div class="entry-title">Architecture de l'Influence et Comportements de Consommation</div>
         <div class="entry-date">2026</div>
       </div>
       <div class="entry-desc">
-        Analyse des comportements de consommation.<br>
-        <span class="entry-role" style="font-size: 8pt; margin-top: 4px;">Technologies :</span> 
-        <span style="font-size: 9pt; color: #374151;">Méthodologie d'enquête, analyse statistique.</span>
+        Analyse de l’architecture invisible de l’industrie et de seu poder de prescrição sobre os comportamentos coletivos. Estudo quantitativo (428 respondentes) demonstrando como as decisões estratégicas do setor moldam a ilusão do livre-arbítrio individual.
+      </div>
+      <div class="tech-row">
+        <span class="tech-tag">Python</span><span class="tech-tag">K-means Clustering</span><span class="tech-tag">Sankey Diagrams</span>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <div class="entry-title">Analyse textuelle RSE : Engagement vs Réalité</div>
+        <div class="entry-title">Analyse Sémantique : Engagement Institutionnel vs Réalité</div>
         <div class="entry-date">2025</div>
       </div>
       <div class="entry-desc">
-        Extraction de texte à partir de rapports PDF et analyse RSE.<br>
-        <span class="entry-role" style="font-size: 8pt; margin-top: 4px;">Technologies :</span> 
-        <span style="font-size: 9pt; color: #374151;">Python, NLP.</span>
+        Confrontation entre la rhétorique institutionnelle et les faits opérationnels via l’analyse NLP de 17 rapports ESG. Identification de la « grammaire technique » pour distinguer le marketing des priorités réelles de la chaîne de valeur.
+      </div>
+      <div class="tech-row">
+        <span class="tech-tag">NLP</span><span class="tech-tag">Web Scraping</span><span class="tech-tag">Python</span>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <div class="entry-title">Au-delà des défilés : Analyse prédictive de tendances par IA</div>
+        <div class="entry-title">Modélisation des Cycles d'Adoption et d'Obsolescence</div>
         <div class="entry-date">2024</div>
       </div>
       <div class="entry-desc">
-        Web scraping et NLP pour l’identification et l’anticipation de tendances.<br>
-        <span class="entry-role" style="font-size: 8pt; margin-top: 4px;">Technologies :</span> 
-        <span style="font-size: 9pt; color: #374151;">Python, Web scraping, NLP.</span>
+        Analyse de l’effet « Trickle-down » (ruissellement) des tendances vers le marché de masse. Estruturação de dados web para identificar padrões de adoção e ciclos de obsolescência psicológica.
+      </div>
+      <div class="tech-row">
+        <span class="tech-tag">Web Scraping</span><span class="tech-tag">EDA</span><span class="tech-tag">NLP</span><span class="tech-tag">Python</span>
       </div>
     </div>
   </div>
