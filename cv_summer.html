@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Melissa MARIANO ALBUQUERQUE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --accent: #2a4a7f;
+    --accent-light: #e8eef7;
+    --muted: #6b7280;
+    --rule: #c8d4e8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: white;
+    color: var(--ink);
+    font-size: 9.5pt;
+    line-height: 1.35;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 9mm 15mm 8mm 15mm;
+    background: white;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 9px;
+  }
+  .name-block { line-height: 1.05; }
+  .prenom {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26pt;
+    font-weight: 300;
+    color: var(--ink);
+    display: block;
+  }
+  .nom {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26pt;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+  }
+  .contacts {
+    text-align: right;
+    font-size: 8.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .contacts a { color: var(--accent); text-decoration: none; }
+  .profile-summary {
+    background: var(--accent-light);
+    padding: 6px 11px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--accent);
+    font-size: 9.2pt;
+    line-height: 1.4;
+    color: #2c3e60;
+  }
+  .section { margin-bottom: 9px; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13pt;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+  }
+  .entry { margin-bottom: 7px; page-break-inside: avoid; }
+  .entry-header { margin-bottom: 2px; }
+  .entry-title { font-weight: 600; font-size: 9.5pt; color: var(--ink); }
+  .entry-date { font-weight: 600; font-size: 9pt; color: var(--accent); }
+  .entry-org {
+    font-size: 9pt;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 4px;
+  }
+  .desc { font-size: 9pt; color: #374151; margin-top: 1px; }
+  p.bullet-point {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    padding-left: 11px;
+    text-indent: -11px;
+    font-size: 9.5pt;
+    color: #374151;
+    line-height: 1.35;
+  }
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 0 28px;
+  }
+  .skill-row { margin-bottom: 4px; }
+  .skill-label {
+    font-weight: 700;
+    font-size: 8pt;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .skill-text { font-size: 9pt; color: #374151; line-height: 1.35; }
+  .lang-row { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+  .lang-name { font-size: 9.5pt; font-weight: 600; width: 72px; color: var(--ink); }
+  .lang-dots { display: flex; gap: 3px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule); }
+  .dot.filled { background: var(--accent); }
+  .lang-level { font-size: 8pt; color: var(--muted); }
+  .cert-tag {
+    font-size: 7pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 1px 6px;
+    border-radius: 2px;
+    background: var(--accent-light);
+    color: var(--accent);
+    margin-left: 79px;
+    display: inline-block;
+    margin-top: -2px;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="name-block">
+      <span class="prenom">Melissa</span>
+      <span class="nom">Mariano Albuquerque</span>
+    </div>
+    <div class="contacts">
+      Romans-sur-Isère / Valence &nbsp;·&nbsp; disponible juillet–août<br>
+      +33 7 69 14 81 24<br>
+      <a href="mailto:melissa.mariano-albuquerque@etu.univ-cotedazur.fr">melissa.mariano-albuquerque@etu.univ-cotedazur.fr</a>
+    </div>
+  </div>
+
+  <div class="profile-summary">
+    Étudiante sérieuse et dynamique, trilingue, avec expérience en accueil, vente et relation client. À l'aise avec tout type de public et habituée au travail en équipe, je m'adapte rapidement aux environnements opérationnels.
+  </div>
+
+  <div class="section">
+    <div class="section-title">Expérience Professionnelle</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Accueil et service aux usagers</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 01/2026 – en cours</span>
+      </div>
+      <span class="entry-org">Learning Centre SophiaTech – Université Côte d'Azur, Biot</span>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Accueil trilingue, orientation du public et gestion des prêts/retours</p>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Renseignement des usagers et procédures administratives quotidiennes</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Expérience professionnelle en entreprise (marketing & communication)</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2018 – 2025</span>
+      </div>
+      <span class="entry-org">BeFly, Grupo GSH, Fin4she, Pandhora, Xerpa – Brésil</span>
+      <p class="desc">Coordination de projets, gestion de la communication et suivi de la relation client dans des environnements à forte culture du service.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Réceptionniste / Service client</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2018</span>
+      </div>
+      <span class="entry-org">Firmenich – Brésil</span>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Accueil bilingue (anglais/portugais) et gestion des appels entrants</p>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Organisation des rendez-vous et gestion rigoureuse des demandes clients</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Réceptionniste en hôtellerie</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2016 – 2017</span>
+      </div>
+      <span class="entry-org">HB Hotels Sequóia – Brésil</span>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Gestion des procédures de check-in et check-out</p>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Facturation, encaissement et résolution de situations imprévues</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Vente & caisse – prêt-à-porter</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2014 – 2016</span>
+      </div>
+      <span class="entry-org">Riachuelo, Khelf, Inbrands – Brésil</span>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Vente conseil, gestion de caisse et procédures de paiement</p>
+      <p class="bullet-point"><strong style="color: var(--accent);">–</strong> Réapprovisionnement des stocks et organisation de l'espace de vente</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Formation</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">B.U.T. Science des Données</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2025 – en cours</span>
+      </div>
+      <span class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur</span>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Diplôme de Technologie en Marketing (Bac+2)</span>
+        <span class="entry-date"> &nbsp;•&nbsp; 2018 – 2019</span>
+      </div>
+      <span class="entry-org">Centro Universitário FMU, Brésil</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Compétences & Langues</div>
+    <div class="bottom-grid">
+      <div>
+        <div class="skill-row">
+          <span class="skill-label">Accueil & Relation Client</span>
+          <span class="skill-text">Accueil trilingue, conseil client personnalisé, gestion de caisse, procédures d'arrivée/départ en hôtellerie</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Organisation & Gestion</span>
+          <span class="skill-text">Facturation, gestion d'agenda, tenue de caisse, outils de bureautique (Excel)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Savoir-être</span>
+          <span class="skill-text">Adaptabilité, autonomie, sens élevé du service, aisance en milieu multiculturel</span>
+        </div>
+      </div>
+      <div>
+        <div class="lang-row">
+          <div class="lang-name">Portugais</div>
+          <div class="lang-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div>
+          <div class="lang-level">Langue maternelle</div>
+        </div>
+        <div class="lang-row">
+          <div class="lang-name">Français</div>
+          <div class="lang-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+          <div class="lang-level">C1 – Avancé</div>
+        </div>
+        <div class="cert-tag">DALF C1 · 68/100</div>
+        <div class="lang-row">
+          <div class="lang-name">Anglais</div>
+          <div class="lang-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+          <div class="lang-level">C1 – Avancé</div>
+        </div>
+        <div class="cert-tag">Duolingo English Test · 135/160</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

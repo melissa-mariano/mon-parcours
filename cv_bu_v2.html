@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Melissa MARIANO ALBUQUERQUE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --accent: #2a4a7f;
+    --accent-light: #e8eef7;
+    --muted: #6b7280;
+    --rule: #c8d4e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: white;
+    color: var(--ink);
+    font-size: 9.5pt;
+    line-height: 1.35;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 9mm 15mm 9mm 15mm;
+    background: white;
+    min-height: 297mm;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 7px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 11px;
+  }
+
+  .name-block { line-height: 1.05; }
+
+  .prenom {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24pt;
+    font-weight: 300;
+    color: var(--ink);
+    display: block;
+  }
+  .nom {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24pt;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+  }
+
+  .contacts {
+    text-align: right;
+    font-size: 7.3pt;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .contacts a { color: var(--accent); text-decoration: none; }
+
+  /* ── PROFIL ── */
+  .profile-summary {
+    background: var(--accent-light);
+    padding: 7px 12px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--accent);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #2c3e60;
+  }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 12px; }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+  }
+
+  /* ── ENTRIES ── */
+  .entry { margin-bottom: 9px; page-break-inside: avoid; }
+
+  .entry-header {
+    display: table;
+    width: 100%;
+  }
+
+  .exp-area {
+    font-weight: 700;
+    font-size: 9.8pt;
+    color: var(--ink);
+    display: table-cell;
+    width: 100%;
+  }
+
+  .entry-date {
+    font-size: 7.8pt;
+    color: var(--muted);
+    font-weight: 500;
+    white-space: nowrap;
+    display: table-cell;
+    text-align: right;
+    padding-left: 8px;
+  }
+
+  .exp-role {
+    font-size: 8pt;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 1px 0 1px 0;
+  }
+
+  .entry-org-row {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .entry-org-row .entry-org {
+    margin-right: 6px;
+  }
+
+  .entry-org {
+    font-size: 8.2pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── SECTOR TAG ── */
+  .sector-tag {
+    font-size: 6.8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 1px 6px;
+    border-radius: 2px;
+    background: var(--accent-light);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .entry-desc {
+    font-size: 8.8pt;
+    color: #374151;
+    line-height: 1.4;
+  }
+
+  .entry-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3px;
+  }
+  .entry-bullets li {
+    font-size: 8.8pt;
+    color: #374151;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 2px;
+    line-height: 1.4;
+  }
+  .entry-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .badge {
+    font-size: 7pt;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+
+  /* ── GROUPE ── */
+  .group-entry { margin-bottom: 9px; page-break-inside: avoid; }
+  .group-header {
+    display: table;
+    width: 100%;
+  }
+  .group-title {
+    font-weight: 700;
+    font-size: 9.8pt;
+    color: var(--ink);
+    display: table-cell;
+    width: 100%;
+  }
+  .group-meta {
+    display: block;
+    margin: 1px 0 3px 0;
+  }
+  .group-meta .group-orgs {
+    margin-right: 6px;
+  }
+  .group-meta .sector-tag {
+    margin-right: 4px;
+  }
+  .group-orgs {
+    font-size: 8.2pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── BOTTOM GRID ── */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0 28px;
+  }
+
+  .skill-row {
+    margin-bottom: 5px;
+    font-size: 8.8pt;
+    color: #374151;
+  }
+  .skill-row strong {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 7.8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  .lang-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 5px;
+  }
+  .lang-name { font-size: 8.8pt; font-weight: 600; width: 70px; color: var(--ink); }
+  .lang-dots { display: flex; gap: 3px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule); }
+  .dot.filled { background: var(--accent); }
+  .lang-level { font-size: 7.8pt; color: var(--muted); }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; padding: 9mm 15mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="name-block">
+      <span class="prenom">Melissa</span>
+      <span class="nom">Mariano Albuquerque</span>
+    </div>
+    <div class="contacts">
+      06560 Valbonne, France<br>
+      +33 7 69 14 81 24<br>
+      <a href="mailto:melissa.mariano-albuquerque@etu.univ-cotedazur.fr">melissa.mariano-albuquerque@etu.univ-cotedazur.fr</a><br>
+      <a href="https://linkedin.com/in/mellalbuquerque">linkedin.com/in/mellalbuquerque</a>
+    </div>
+  </div>
+
+  <div class="profile-summary">
+    Étudiante déjà en poste au Learning Centre, je fréquente ce lieu régulièrement soit pour travailler soit pour réviser. Trilingue et expérimentée, je souhaite poursuivre ma mission au sein de cet environnement inspirant où je m'investis pleinement.
+  </div>
+
+  <div class="section">
+    <div class="section-title">Formation</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">B.U.T. Science des Données <span class="badge">Mention Bien · Rang 4 / 27</span></div>
+        <div class="entry-date">2025 – en cours</div>
+      </div>
+      <div class="entry-org-row">
+        <span class="entry-org">IUT Nice Côte d'Azur – Université Côte d'Azur</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">Certification professionnelle – Science et analyse de données</div>
+        <div class="entry-date">2022 – 2024</div>
+      </div>
+      <div class="entry-org-row">
+        <span class="entry-org">USP – Escola Superior de Agricultura "Luiz de Queiroz" (ESALQ), Brésil</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">Diplôme de Technologie en Marketing (Bac+2)</div>
+        <div class="entry-date">2018 – 2019</div>
+      </div>
+      <div class="entry-org-row">
+        <span class="entry-org">Centro Universitário FMU, Brésil</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Expérience Professionnelle</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">Accueil</div>
+        <div class="entry-date">01/2026 – en cours</div>
+      </div>
+      <div class="exp-role">Emploi étudiant</div>
+      <div class="entry-org-row">
+        <span class="entry-org">Learning Centre SophiaTech – Université Côte d'Azur, Biot</span>
+        <span class="sector-tag">Enseignement supérieur</span>
+      </div>
+      <div class="entry-desc">Accueil du public, orientation des usagers et gestion des prêts et retours.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">Data Ops</div>
+        <div class="entry-date">12/2025 – 01/2026</div>
+      </div>
+      <div class="exp-role">Stage</div>
+      <div class="entry-org-row">
+        <span class="entry-org">FNEEK – Biot, France</span>
+        <span class="sector-tag">Finance</span>
+      </div>
+      <div class="entry-desc">Automatisation de la collecte de données par web scraping et structuration de bases de données via NLP.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="exp-area">Marketing Analytics</div>
+        <div class="entry-date">2023 – 2025</div>
+      </div>
+      <div class="exp-role">CDI · Experte</div>
+      <div class="entry-org-row">
+        <span class="entry-org">BeFly – São Paulo, Brésil</span>
+        <span class="sector-tag">Tourisme</span>
+      </div>
+      <ul class="entry-bullets">
+        <li>Analyse de données marketing multi-sources (Google, Meta, CRM) via Looker Studio, suivi des KPI et recommandations.</li>
+        <li>Développement d'un modèle de clustering en Python pour identifier des segments clients et personas.</li>
+      </ul>
+    </div>
+
+    <div class="group-entry">
+      <div class="group-header">
+        <div class="group-title">Marketing & Communication</div>
+        <div class="entry-date">2018 – 2023</div>
+      </div>
+      <div class="group-meta">
+        <span class="group-orgs">Grupo GSH, Fin4she, Pandhora, Xerpa – Brésil</span>
+        <span class="sector-tag">Santé</span>
+        <span class="sector-tag">Finance</span>
+        <span class="sector-tag">Tech</span>
+      </div>
+      <div class="entry-desc">Marketing digital, branding, performance et gestion de campagnes multicanales. Pilotage de stratégies de marque, gestion des réseaux sociaux et analyse des KPIs.</div>
+    </div>
+
+    <div class="group-entry">
+      <div class="group-header">
+        <div class="group-title">Accueil, Vente & Service Client</div>
+        <div class="entry-date">2014 – 2018</div>
+      </div>
+      <div class="group-meta">
+        <span class="group-orgs">Firmenich, HB Hotels Sequóia, Riachuelo, Khelf, Inbrands – Brésil</span>
+        <span class="sector-tag">Industrie</span>
+        <span class="sector-tag">Hôtellerie</span>
+        <span class="sector-tag">Mode</span>
+      </div>
+      <ul class="entry-bullets">
+        <li>Accueil bilingue (portugais/anglais), gestion de caisse, relation client en boutique et en hôtellerie.</li>
+        <li>Gestion des check-in/check-out, facturation et organisation des espaces de vente.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-title">Compétences & Langues</div>
+    <div class="bottom-grid">
+      <div>
+        <div class="skill-row">
+          <strong>Accueil & Relation Client</strong>
+          Accueil trilingue (FR/EN/PT), gestion de la circulation (prêts, retours, réservations), orientation des usagers, gestion de caisse et procédures d'accueil.
+        </div>
+        <div class="skill-row">
+          <strong>Expertise Logicielle & Numérique</strong>
+          Maîtrise du SIGB Koha, gestion des espaces via Affluences et utilisation avancée du Pack Office (Excel, Word).
+        </div>
+        <div class="skill-row">
+          <strong>Soft Skills</strong>
+          Adaptabilité, autonomie, sens du service, rigueur.
+        </div>
+      </div>
+      <div>
+        <div class="lang-row">
+          <div class="lang-name">Portugais</div>
+          <div class="lang-dots">
+            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+          </div>
+          <div class="lang-level">Langue maternelle</div>
+        </div>
+        <div class="lang-row">
+          <div class="lang-name">Français</div>
+          <div class="lang-dots">
+            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+          </div>
+          <div class="lang-level">C1 – Avancé</div>
+        </div>
+        <div style="margin-left: 77px; margin-top: -3px; margin-bottom: 5px;">
+          <span class="sector-tag">DALF C1 · 68/100</span>
+        </div>
+        <div class="lang-row">
+          <div class="lang-name">Anglais</div>
+          <div class="lang-dots">
+            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+          </div>
+          <div class="lang-level">C1 – Avancé</div>
+        </div>
+        <div style="margin-left: 77px; margin-top: -3px; margin-bottom: 5px;">
+          <span class="sector-tag">Duolingo English Test · 135/160</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
